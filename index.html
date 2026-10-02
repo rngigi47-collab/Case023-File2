@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10241d" />
+  <title>CASE 023 — File 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Roboto+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=day3memorable" />
+</head>
+<body>
+<main id="app">
+<section id="envelopeStage" class="stage active dark-stage">
+  <div class="meta"><span>HUMAN BEHAVIOUR DIVISION</span><span>03.10.2026</span></div>
+  <button id="envelopeBtn" class="envelope" type="button">
+    <span class="seal">023</span>
+    <span class="label"><b>FINAL ARCHIVE</b><small>FOR W. ATURIA</small></span>
+  </button>
+  <p class="hint">Tap the sealed archive.</p>
+</section>
+
+<section id="passwordStage" class="stage dark-stage">
+  <div class="panel dark-panel">
+    <p class="eyebrow light">SECURE ARCHIVE // FILE 03</p>
+    <h1>IDENTITY CHECK</h1>
+    <p>This file is date-locked.</p>
+    <form id="passwordForm">
+      <label>ACCESS CODE</label>
+      <input id="passwordInput" type="password" inputmode="numeric" maxlength="6" placeholder="••••••">
+      <button class="primary" type="submit">VERIFY ACCESS</button>
+    </form>
+    <p id="passwordFeedback" class="feedback"></p>
+  </div>
+</section>
+
+<section id="calibrationStage" class="stage dark-stage">
+  <div class="panel calibration">
+    <p class="eyebrow light">PERFORMANCE REVIEW</p>
+    <h2>DIFFICULTY CALIBRATION COMPLETE</h2>
+    <div class="log">
+      <div><span>FILE 01</span><b>SOLVED</b></div>
+      <div><span>FILE 02</span><b>SOLVED</b></div>
+      <div><span>RESPONSE TIME</span><b>ABOVE EXPECTED</b></div>
+      <div><span>FILE 03</span><b class="gold">ADJUSTED</b></div>
+    </div>
+    <p class="typewriter">Final archive protocol has been modified.</p>
+    <button id="beginArchiveBtn" class="primary">OPEN FILE 03</button>
+  </div>
+</section>
+
+<section id="archiveStage" class="stage paper-stage">
+  <div class="dossier">
+    <header>
+      <div>
+        <p class="dept">HUMAN BEHAVIOUR DIVISION</p>
+        <p class="micro">CASE ANALYSIS UNIT</p>
+      </div>
+      <div class="ref">REF: 023-03<br>STATUS: ACTIVE</div>
+    </header>
+
+    <section id="cover" class="screen active">
+      <div class="stamp">FINAL REVIEW</div>
+      <p class="eyebrow">CASE 023</p>
+      <h1>FILE 03</h1>
+      <h2>ARCHIVE RECONSTRUCTION</h2>
+      <p class="intro">Previous versions are evidence, not enemies.</p>
+      <button id="startReconstructionBtn" class="primary">BEGIN RECONSTRUCTION</button>
+    </section>
+
+    <section id="reconstruction" class="screen">
+      <p class="eyebrow">PHASE 01 // RECONSTRUCTION</p>
+      <h2>CLASSIFY THE ARCHIVE</h2>
+      <p class="instruction">Each record belongs to one action. Assign all four correctly.</p>
+
+      <div class="record-list">
+        <article class="record">
+          <span class="record-id">ARCHIVE 01</span>
+          <p>The curiosity that kept asking why — even when the answer was uncomfortable.</p>
+          <select data-correct="KEEP">
+            <option value="">Assign action...</option>
+            <option>KEEP</option>
+            <option>QUESTION</option>
+            <option>FORGIVE</option>
+            <option>BUILD</option>
+          </select>
+        </article>
+        <article class="record">
+          <span class="record-id">ARCHIVE 02</span>
+          <p>Beliefs inherited from other people that no longer survive close examination.</p>
+          <select data-correct="QUESTION">
+            <option value="">Assign action...</option>
+            <option>KEEP</option>
+            <option>QUESTION</option>
+            <option>FORGIVE</option>
+            <option>BUILD</option>
+          </select>
+        </article>
+        <article class="record">
+          <span class="record-id">ARCHIVE 03</span>
+          <p>Older coping mechanisms created for survival, even when they later became limiting.</p>
+          <select data-correct="FORGIVE">
+            <option value="">Assign action...</option>
+            <option>KEEP</option>
+            <option>QUESTION</option>
+            <option>FORGIVE</option>
+            <option>BUILD</option>
+          </select>
+        </article>
+        <article class="record">
+          <span class="record-id">ARCHIVE 04</span>
+          <p>The habits, standards, and choices that will shape the next version deliberately.</p>
+          <select data-correct="BUILD">
+            <option value="">Assign action...</option>
+            <option>KEEP</option>
+            <option>QUESTION</option>
+            <option>FORGIVE</option>
+            <option>BUILD</option>
+          </select>
+        </article>
+      </div>
+
+      <button id="checkReconstructionBtn" class="primary">CHECK RECONSTRUCTION</button>
+      <p id="reconstructionFeedback" class="feedback"></p>
+    </section>
+
+    <section id="principle" class="screen">
+      <p class="eyebrow">PHASE 02 // INTERPRETATION</p>
+      <h2>IDENTIFY THE PRINCIPLE</h2>
+      <div class="evidence-strip">
+        <span>KEEP</span><i>+</i><span>QUESTION</span><i>+</i><span>FORGIVE</span><i>+</i><span>BUILD</span>
+      </div>
+      <p class="instruction">What principle best explains why none of these actions require rejecting every previous version of a person?</p>
+
+      <form id="principleForm">
+        <label class="option"><input type="radio" name="principle" value="REINVENTION"><span><b>A.</b> Reinvention — becoming someone entirely new.</span></label>
+        <label class="option"><input type="radio" name="principle" value="INTEGRATION"><span><b>B.</b> Integration — carrying forward what serves while changing what does not.</span></label>
+        <label class="option"><input type="radio" name="principle" value="DETACHMENT"><span><b>C.</b> Detachment — separating completely from the past.</span></label>
+        <label class="option"><input type="radio" name="principle" value="ACCEPTANCE"><span><b>D.</b> Acceptance — leaving everything exactly as it is.</span></label>
+        <button class="primary" type="submit">SUBMIT INTERPRETATION</button>
+      </form>
+      <p id="principleFeedback" class="feedback"></p>
+    </section>
+
+    <section id="keyStage" class="screen">
+      <p class="eyebrow">PHASE 03 // FINAL EXTRACTION</p>
+      <h2>COMPLETE THE FILE</h2>
+
+      <div class="clue-card">
+        <p>Integration is the process.</p>
+        <p>The archive records are the evidence.</p>
+        <p>The next version is never final.</p>
+      </div>
+
+      <p class="riddle">What single word describes the continuous process of becoming more fully yourself?</p>
+
+      <form id="finalForm">
+        <input id="finalInput" type="text" autocomplete="off" placeholder="Enter recovered key">
+        <button class="primary" type="submit">RECOVER KEY</button>
+      </form>
+      <p id="finalFeedback" class="feedback"></p>
+    </section>
+
+    <section id="result" class="screen result-screen">
+      <div class="passed-stamp">ARCHIVE SOLVED</div>
+      <p class="eyebrow">RECOVERED KEY 03</p>
+      <h2 class="big-key">BECOMING</h2>
+      <p class="result-copy">The previous drafts remain part of the evidence. They are not the final verdict.</p>
+      <blockquote>“Still becoming.”</blockquote>
+      <button id="closeBtn" class="secondary">CLOSE CASE 023</button>
+    </section>
+
+    <section id="closed" class="screen result-screen">
+      <p class="eyebrow">CASE 023 // FINAL STATUS</p>
+      <h2>CASE 023 CLOSED</h2>
+      <div class="closure-grid">
+        <div><span>KEY 01</span><b>MOTIVE</b></div>
+        <div><span>KEY 02</span><b>FEAR</b></div>
+        <div><span>KEY 03</span><b>BECOMING</b></div>
+      </div>
+      <p class="next">NEXT ACTIVATION<br><b>04.10 // CASE 024</b></p>
+      <p class="final-line">Twenty-four is not a conclusion. It is another file opening.</p>
+    </section>
+
+    <footer><span>CASE 023 / FILE 03</span><span>PEOPLE. PATTERNS. MOTIVES. TRUTH.</span></footer>
+  </div>
+</section>
+</main>
+<script src="script.js?v=day3memorable"></script>
+</body>
+</html>
